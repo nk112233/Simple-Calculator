@@ -1,42 +1,42 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <title>Simple Caculator</title>
-    </head>
-    <body>
-    <div id="calculator">
-        <div id="inputbox">
-            <div id="input"></div>
-        </div>
-        <div id="allbuttons">
-            <button id="all-clear">AC</button>
-            <button id="clear">C</button>
-            <button id="sign">+/-</button>
-            <button class="divide">/</button>
-    
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-            <button class="multiply">*</button>
-    
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button class="minus">-</button>
-    
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button class="plus">+</button>
-    
-            <button class="number num-0">0</button>
-            <button id="dot">.</button>
-            <button id="result">=</button>
-        </div>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Caculator</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div id="calculator">
+    <div id="inputbox">
+        <div id="input"></div>
     </div>
-    </body>
-    </html>
+    <div id="allbuttons">
+        <button class="button-79" id="all-clear">AC</button>
+        <button class="button-79" id="clear">C</button>
+        <button class="button-79" id="sign">+/-</button>
+        <button class="button-79 divide">/</button>
+
+        <button class="button-79 number">7</button>
+        <button class="button-79 number">8</button>
+        <button class="button-79 number">9</button>
+        <button class="button-79 multiply">*</button>
+
+        <button class="button-79 number">4</button>
+        <button class="button-79 number">5</button>
+        <button class="button-79 number">6</button>
+        <button class="button-79 minus">-</button>
+
+        <button class="button-79 number">1</button>
+        <button class="button-79 number">2</button>
+        <button class="button-79 number">3</button>
+        <button class="button-79 plus">+</button>
+
+        <button class="button-79 number num-0">0</button>
+        <button class="button-79" id="dot">.</button>
+        <button class="button-79" id="result">=</button>
+    </div>
+</div>
+</body>
 </html>
