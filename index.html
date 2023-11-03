@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Caculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
 <div id="calculator">
     <div id="inputbox">
-        <div id="input"></div>
+        <div id="input">&nbsp</div>
     </div>
     <div id="allbuttons">
-        <button class="button-79" id="all-clear">AC</button>
-        <button class="button-79" id="clear">C</button>
+        <button class="button-79" id="all-clear" onclick="clr()">AC</button>
+        <button class="button-79" id="clear" onclick="clr()">C</button>
         <button class="button-79" id="sign">+/-</button>
-        <button class="button-79 divide">/</button>
+        <button class="button-79 divide" onclick="append('/')">/</button>
 
-        <button class="button-79 number">7</button>
-        <button class="button-79 number">8</button>
-        <button class="button-79 number">9</button>
-        <button class="button-79 multiply">*</button>
+        <button class="button-79 number" onclick="append('7')">7</button>
+        <button class="button-79 number" onclick="append('8')">8</button>
+        <button class="button-79 number" onclick="append('9')">9</button>
+        <button class="button-79 multiply" onclick="append('*')">*</button>
 
-        <button class="button-79 number">4</button>
-        <button class="button-79 number">5</button>
-        <button class="button-79 number">6</button>
-        <button class="button-79 minus">-</button>
+        <button class="button-79 number" onclick="append('4')">4</button>
+        <button class="button-79 number" onclick="append('5')">5</button>
+        <button class="button-79 number" onclick="append('6')">6</button>
+        <button class="button-79 minus" onclick="append('-')">-</button>
 
-        <button class="button-79 number">1</button>
-        <button class="button-79 number">2</button>
-        <button class="button-79 number">3</button>
-        <button class="button-79 plus">+</button>
+        <button class="button-79 number" onclick="append('1')">1</button>
+        <button class="button-79 number" onclick="append('2')">2</button>
+        <button class="button-79 number" onclick="append('3')">3</button>
+        <button class="button-79 plus" onclick="append('+')">+</button>
 
-        <button class="button-79 number num-0">0</button>
-        <button class="button-79" id="dot">.</button>
-        <button class="button-79" id="result">=</button>
+        <button class="button-79 number num-0" onclick="append('0')">0</button>
+        <button class="button-79" id="dot" onclick="append('.')">.</button>
+        <button class="button-79" id="result" onclick="calc()">=</button>
     </div>
 </div>
 </body>
