@@ -30,12 +30,15 @@ body{
     padding: 20px;
     text-align: right;
     margin-bottom: 10px;
+    min-height: 20px;
+    max-height: 20px;
 }
 
 /*input display */
 #input{
     font-size: 1.5em;
     font-weight: bold;
+
 }
 
 /*Calculator buttons structuring */
@@ -124,3 +127,5 @@ body{
 .button-79:not(:disabled):active {
     transform: translateY(.125rem);
 }
+
+
