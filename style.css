@@ -30,6 +30,8 @@ body{
     padding: 20px;
     text-align: right;
     margin-bottom: 10px;
+    min-height: 20px;
+    max-height: 20px;
 }
 
 /*input display */
@@ -124,3 +126,5 @@ body{
 .button-79:not(:disabled):active {
     transform: translateY(.125rem);
 }
+
+
