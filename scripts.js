@@ -9,7 +9,11 @@ function calc(){
     document.getElementById("input").textContent=y;
 }
 
-function clr() { 
+function allclr() { 
     document.getElementById("input").textContent = ""
+}
+function del() { 
+    let x=document.getElementById("input").textContent;
+    document.getElementById("input").textContent = x.substring(0, x.length - 1);
 }
 
