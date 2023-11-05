@@ -22,6 +22,7 @@ function del() {
 document.addEventListener("keydown", keyboard);
 
 function keyboard(e) {
+    e.preventDefault();
     const keyValue = e.key;
     console.log(keyValue);
     if (/^[0-9\+\^\-\*\.\/]$/.test(keyValue)) {
