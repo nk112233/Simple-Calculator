@@ -64,6 +64,7 @@ body{
 /* Equal to button */
 #result{
     background-color: #4caf50;
+    
 }
 
 
@@ -128,6 +129,12 @@ body{
 
 .button-79:not(:disabled):active {
     transform: translateY(.125rem);
+    background-color: #805eb1;
+
+}
+#result:not(:disabled):active{
+    background-color: #805eb1;
+    
 }
 
 
