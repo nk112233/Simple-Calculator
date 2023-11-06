@@ -1,50 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Caculator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
-</head>
-<body>
 <div id="calculator">
-    <div id="inputbox">
-        <span id ="expr"></span>
-        <div id="input">&nbsp</div>
+        <div id="inputbox">
+            <span id ="expr"></span>
+            <div id="input">&nbsp</div>
+        </div>
+        <div id="allbuttons">
+            <button class="button-79" id="all-clear" onclick="allclr()">AC</button>
+            <button class="button-79" id="del"  onclick="del()">DEL</button>
+            <button class="button-79" id="^" id = "%" onclick = "append('%')">%</button>
+            <button class="button-79 divide" id = "/" onclick="append('/')">/</button>
+    
+            <button class="button-79 number" id = "7" onclick="append('7')">7</button>
+            <button class="button-79 number" id = "8" onclick="append('8')">8</button>
+            <button class="button-79 number" id = "9" onclick="append('9')">9</button>
+            <button class="button-79 multiply" id = "*" onclick="append('*')">*</button>
+            <button class="button-79 number" id = "4" onclick="append('4')">4</button>
+            <button class="button-79 number" id = "5" onclick="append('5')">5</button>
+            <button class="button-79 number" id = "6" onclick="append('6')">6</button>
+            <button class="button-79 minus" id = "-" onclick="append('-')">-</button>
+    
+            <button class="button-79 number" id = "1" onclick="append('1')">1</button>
+            <button class="button-79 number" id = "2" onclick="append('2')">2</button>
+            <button class="button-79 number" id = "3" onclick="append('3')">3</button>
+            <button class="button-79 plus" id = "+" onclick="append('+')">+</button>
+    
+            <button class="button-79 number" id = "00" onclick="append('00')">00</button>
+            <button class="button-79 number" id = "0" onclick="append('0')">0</button>
+            <button class="button-79" id="." onclick="append('.')">.</button>
+            <button class="button-79" id="result" onclick="calc()">=</button>
+        </div>
     </div>
-    <div id="allbuttons">
-        <button class="button-79" id="all-clear" onclick="allclr()">AC</button>
-        <button class="button-79" id="del"  onclick="del()">DEL</button>
-        <button class="button-79" id="^" id = "^" onclick = "append('^')">^</button>
-        <button class="button-79 divide" id = "/" onclick="append('/')">/</button>
-
-        <button class="button-79 number" id = "7" onclick="append('7')">7</button>
-        <button class="button-79 number" id = "8" onclick="append('8')">8</button>
-        <button class="button-79 number" id = "9" onclick="append('9')">9</button>
-        <button class="button-79 multiply" id = "*" onclick="append('*')">*</button>
-        <button class="button-79 number" id = "4" onclick="append('4')">4</button>
-        <button class="button-79 number" id = "5" onclick="append('5')">5</button>
-        <button class="button-79 number" id = "6" onclick="append('6')">6</button>
-        <button class="button-79 minus" id = "-" onclick="append('-')">-</button>
-
-        <button class="button-79 number" id = "1" onclick="append('1')">1</button>
-        <button class="button-79 number" id = "2" onclick="append('2')">2</button>
-        <button class="button-79 number" id = "3" onclick="append('3')">3</button>
-        <button class="button-79 plus" id = "+" onclick="append('+')">+</button>
-
-        <button class="button-79 number num-0" id = "0" onclick="append('0')">0</button>
-        <button class="button-79" id="." onclick="append('.')">.</button>
-        <button class="button-79" id="result" onclick="calc()">=</button>
+    <div id="history-box">
+        <div id="history-list">&nbsp</div>
+        <button class= "button-79" id = "clrhs" onclick = "clearHistory()">Clear History</button>
+        </div>
     </div>
-</div>
-<div id="history-box">
-<div class ="hsh2">
-    <h2 >History:</h2>
-</div>
-    <div id="history-list">&nbsp</div>
-    <button class= "button-79" id = "clrhs" onclick = "clearHistory()">Clear History</button>
-    </div>
-</div>
-</body>
-</html>
+    </body>
+    </html>
