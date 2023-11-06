@@ -73,6 +73,16 @@ function keyboard(e) {
         const display = document.getElementById("input");
         display.textContent = display.textContent.slice(0, -1);
     }
+    else if(keyValue === "Escape"){
+    		document.getElementById("all-clear").style.transform = `translateY(.125rem)`;
+        document.getElementById("all-clear").style.backgroundColor = `#cc2900`;
+        document.addEventListener('keyup', () => {
+        document.getElementById("all-clear").style.transform = 'none';
+        document.getElementById("all-clear").style.backgroundColor = `#f44336`;
+        });
+        allclr();
+    	
+    }
 }
 
 function updateHistory() {
@@ -88,6 +98,5 @@ function clearHistory(){
     history = {};
     document.getElementById("history-list").innerHTML = "";
 }
-
 
 
