@@ -25,12 +25,15 @@ function calc(){
     document.getElementById("input").textContent=y;
     x = x.replace("**","^");
     history[x] = y;
-    console.log(history);
+    let hl = document.getElementById("history-list");
+    hl.scrollTop = hl.scrollHeight;
 }
 
 function allclr() { 
     document.getElementById("input").textContent = "";
     document.getElementById("expr").textContent = "";
+    let hl = document.getElementById("history-list");
+    hl.scrollTop = hl.scrollHeight;
 }
 function del() { 
 
