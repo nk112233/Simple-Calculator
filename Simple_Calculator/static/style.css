@@ -2,10 +2,10 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-/* background colour */
-body{
+  }
+  
+  /* background colour */
+  body {
     background-color: #e6e6e6;
     font-family: Arial, sans-serif;
     display: flex;
@@ -13,20 +13,20 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
-}
-
-
-#calculator{
+  
+  }
+  
+  
+  #calculator {
     flex-direction: column;
     background-color: #999999;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-}
-
-/*input box */
-#inputbox{
+  }
+  
+  /*input box */
+  #inputbox {
     background-color: #e6e6e6;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -38,42 +38,42 @@ body{
     max-width: 276px;
     overflow: hidden;
     white-space: nowrap;
-}
-
-/*input display */
-#input{
+  }
+  
+  /*input display */
+  #input {
     font-size: 1.5em;
     font-weight: bold;
-}
-
-/*Calculator buttons structuring */
-#allbuttons{
+  }
+  
+  /*Calculator buttons structuring */
+  #allbuttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
-}
-
-/* AC Button */
-#all-clear{
+  }
+  
+  /* AC Button */
+  #all-clear {
     background-color: #f44336;
-}
-
-
-.num-0{
+  }
+  
+  
+  .num-0 {
     grid-column: span 2;
-}
-
-
-/* Equal to button */
-#result{
+  }
+  
+  
+  /* Equal to button */
+  #result {
     background-color: #4caf50;
-    
-}
-
-
-
-/* Button styling */
-.button-79{
+  
+  }
+  
+  
+  
+  /* Button styling */
+  .button-79 {
     backface-visibility: hidden;
     background-color: #111111;
     border: 0;
@@ -82,40 +82,40 @@ body{
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: Circular,Helvetica,sans-serif;
+    font-family: Circular, Helvetica, sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
     letter-spacing: -.01em;
     line-height: 1.3;
     padding: 1rem 1.25rem;
     position: relative;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     transform: translateZ(0) scale(1);
     transition: transform .2s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
-
-.button-79:disabled{
+  }
+  
+  .button-79:disabled {
     color: #787878;
     cursor: auto;
-}
-
-.button-79:not(:disabled):hover {
+  }
+  
+  .button-79:not(:disabled):hover {
     transform: scale(1.05);
-}
-
-.button-79:not(:disabled):hover:active {
+  }
+  
+  .button-79:not(:disabled):hover:active {
     transform: scale(1.05) translateY(.125rem);
-}
-
-.button-79:focus {
+  }
+  
+  .button-79:focus {
     outline: 0 solid transparent;
-}
-
-.button-79:focus:before {
+  }
+  
+  .button-79:focus:before {
     border-width: .125rem;
     content: "";
     left: calc(-1 * .375rem);
@@ -124,44 +124,58 @@ body{
     top: calc(-1 * .375rem);
     transition: border-radius;
     user-select: none;
-}
-
-.button-79:focus:not(:focus-visible) {
+  }
+  
+  .button-79:focus:not(:focus-visible) {
     outline: 0 solid transparent;
-}
-
-.button-79:not(:disabled):active {
+  }
+  
+  .button-79:not(:disabled):active {
     transform: translateY(.125rem);
-    background-color:#57595b;
-
-}
-#result:not(:disabled):active{
     background-color: #57595b;
-    
-}
-#history-box{
+  
+  }
+  
+  #result:not(:disabled):active {
+    background-color: #57595b;
+  
+  }
+  
+  #history-box {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #555555;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-top: 20px;
     width: 320px;
-}
-#history-list{
+
+  
+  }
+  
+  #history-list {
     font-size: large;
     font-weight: bold;
-    color :#DFA67B;
+    color: #DFA67B;
     padding: 2px;
-}
-#hsrecord{
+    overflow-y: auto;
+    max-height: 40px;
+  }
+  
+  #hsrecord {
     padding: 2px;
-}
-#clrhs{
-    color : rgb(253, 245, 233);
+  }
+  
+  #clrhs {
+    color: rgb(253, 245, 233);
     background-color: #333333;
-    margin-top : 5px;
-    margin-bottom : 5px;
-}
+    margin-top: 40px;
+    margin-bottom: 5px;
+    justify-items: center;
+    font-size: small;
 
 
+  }
+  

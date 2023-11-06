@@ -14,23 +14,34 @@ function append(value){
 
 }
 function IsOperator(strr){
-        const operators = [ "+", "-", "*", "/", "^"];
+        const operators = [ "+", "-", "*", "/", "^","%"];
         return operators.includes(strr);
 }
 function calc(){
     let x=document.getElementById("input").textContent;
     document.getElementById("expr").textContent = x;
-    x = x.replace("^","**");
-    let y=eval(x);
-    document.getElementById("input").textContent=y;
-    x = x.replace("**","^");
-    history[x] = y;
-    console.log(history);
+    x = x.replace("%","/100*");
+    try {
+        let y = eval(x);
+        if (isNaN(y)) {
+            throw new Error("Input Error");
+        }
+        
+        document.getElementById("input").textContent = y;
+        x = x.replace("/100*", "%");
+        history[x] = y;
+    } catch (err) {
+        window.alert("Input Error!");
+    }
+    let hl = document.getElementById("history-list");
+    hl.scrollTop = hl.scrollHeight;
 }
 
 function allclr() { 
     document.getElementById("input").textContent = "";
     document.getElementById("expr").textContent = "";
+    let hl = document.getElementById("history-list");
+    hl.scrollTop = hl.scrollHeight;
 }
 function del() { 
 
@@ -73,6 +84,16 @@ function keyboard(e) {
         const display = document.getElementById("input");
         display.textContent = display.textContent.slice(0, -1);
     }
+    else if(keyValue === "Escape"){
+    		document.getElementById("all-clear").style.transform = `translateY(.125rem)`;
+        document.getElementById("all-clear").style.backgroundColor = `#cc2900`;
+        document.addEventListener('keyup', () => {
+        document.getElementById("all-clear").style.transform = 'none';
+        document.getElementById("all-clear").style.backgroundColor = `#f44336`;
+        });
+        allclr();
+    	
+    }
 }
 
 function updateHistory() {
@@ -88,6 +109,4 @@ function clearHistory(){
     history = {};
     document.getElementById("history-list").innerHTML = "";
 }
-
-
 
