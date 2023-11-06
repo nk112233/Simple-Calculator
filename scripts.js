@@ -14,17 +14,25 @@ function append(value){
 
 }
 function IsOperator(strr){
-        const operators = [ "+", "-", "*", "/", "^"];
+        const operators = [ "+", "-", "*", "/", "^","%"];
         return operators.includes(strr);
 }
 function calc(){
     let x=document.getElementById("input").textContent;
     document.getElementById("expr").textContent = x;
-    x = x.replace("^","**");
-    let y=eval(x);
-    document.getElementById("input").textContent=y;
-    x = x.replace("**","^");
-    history[x] = y;
+    x = x.replace("%","/100*");
+    try {
+        let y = eval(x);
+        if (isNaN(y)) {
+            throw new Error("Input Error");
+        }
+        
+        document.getElementById("input").textContent = y;
+        x = x.replace("/100*", "%");
+        history[x] = y;
+    } catch (err) {
+        window.alert("Input Error!");
+    }
     let hl = document.getElementById("history-list");
     hl.scrollTop = hl.scrollHeight;
 }
@@ -101,5 +109,4 @@ function clearHistory(){
     history = {};
     document.getElementById("history-list").innerHTML = "";
 }
-
 
